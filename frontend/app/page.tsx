@@ -14,26 +14,26 @@ import {
   Identity,
   EthBalance,
 } from '@coinbase/onchainkit/identity';
-import ArrowSvg from './svg/ArrowSvg';
-import ImageSvg from './svg/Image';
-import OnchainkitSvg from './svg/OnchainKit';
+// import ArrowSvg from './svg/ArrowSvg';
+// import ImageSvg from './svg/Image';
+// import OnchainkitSvg from './svg/OnchainKit';
 
-const components = [
-  {
-    name: 'Transaction',
-    url: 'https://onchainkit.xyz/transaction/transaction',
-  },
-  { name: 'Swap', url: 'https://onchainkit.xyz/swap/swap' },
-  { name: 'Checkout', url: 'https://onchainkit.xyz/checkout/checkout' },
-  { name: 'Wallet', url: 'https://onchainkit.xyz/wallet/wallet' },
-  { name: 'Identity', url: 'https://onchainkit.xyz/identity/identity' },
-];
+// const components = [
+//   {
+//     name: 'Transaction',
+//     url: 'https://onchainkit.xyz/transaction/transaction',
+//   },
+//   { name: 'Swap', url: 'https://onchainkit.xyz/swap/swap' },
+//   { name: 'Checkout', url: 'https://onchainkit.xyz/checkout/checkout' },
+//   { name: 'Wallet', url: 'https://onchainkit.xyz/wallet/wallet' },
+//   { name: 'Identity', url: 'https://onchainkit.xyz/identity/identity' },
+// ];
 
-const templates = [
-  { name: 'NFT', url: 'https://github.com/coinbase/onchain-app-template' },
-  { name: 'Commerce', url: 'https://github.com/coinbase/onchain-commerce-template'},
-  { name: 'Fund', url: 'https://github.com/fakepixels/fund-component' },
-];
+// const templates = [
+//   { name: 'NFT', url: 'https://github.com/coinbase/onchain-app-template' },
+//   { name: 'Commerce', url: 'https://github.com/coinbase/onchain-commerce-template'},
+//   { name: 'Fund', url: 'https://github.com/fakepixels/fund-component' },
+// ];
 
 export default function App() {
   return (
