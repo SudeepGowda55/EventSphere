@@ -23,9 +23,9 @@ async function sendWelcomeMessage(context) {
   //     "I will help you book your movie tickets step by step.\n\n" +
   //     "Let's get started with /locations to choose a location.";
   const welcomeMessage = `
-╔════════════════════════════════╗
-║   🎬 Welcome to MovieBot 🎥   ║
-╚════════════════════════════════╝
+╔════════════════════════════╗
+║ 🎬 Welcome to MovieBot 🎥 ║
+╚════════════════════════════╝
 
 Hey there! 👋 I'm your personal movie booking assistant.
 
@@ -48,9 +48,9 @@ async function listAvailableLocations(context) {
     const locations = data.locations;
     if (locations.length > 0) {
       let locationMessage = `
-╭──────────────────╮
-│ 🌎 Select City   |
-╰──────────────────╯
+╭───────────────╮
+│🌎 Select City |
+╰───────────────╯
 
 Available locations around the globe:
 `;
@@ -165,8 +165,8 @@ async function listAvailableTheatres(context, message) {
     if (theatres.length > 0) {
       let theatresMessage = `
 ╔════════════════════════╗
-    🎬 ${userBookingData["title"]}
-    🗣️ ${language}
+  🎬 ${userBookingData["title"]}
+  🗣️ ${language}
 ╚════════════════════════╝
 
 Available Theatres:`;
@@ -216,8 +216,8 @@ async function listShowtimes(context, message) {
     if (showtimes.length > 0) {
       let showtimesMessage = `
 ╔═══════════════════════╗
-    🎬 ${userBookingData.title}
-    🏛️ ${userBookingData.theatre}
+  🎬 ${userBookingData.title}
+  🏛️ ${userBookingData.theatre}
 ╚═══════════════════════╝
 
 Today's Show Times:`;
@@ -296,9 +296,9 @@ Today's Show Times:`;
 
 async function sendUnknownMessage(context) {
   const sendUnknownCommandMessage = `
-  ╭─────────────────╮
-  │  ❓ Oops!       │
-  ╰─────────────────╯
+  ╭─────────────╮
+  │  ❓ Oops!   │
+  ╰─────────────╯
   
   I didn't understand that command
   
@@ -336,6 +336,7 @@ run(async (context) => {
   }
 
   if (text == "/locations") {
+    resetUserBookingData();
     await listAvailableLocations(context);
   } else if (
     parseInt(text.split(" ")[0]) >= 1 &&
