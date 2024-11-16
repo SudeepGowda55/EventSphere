@@ -1,5 +1,6 @@
-import {SignProtocolClient, SpMode, EvmChains} from "@ethsign/sp-sdk"
+import { SignProtocolClient, SpMode, EvmChains } from "@ethsign/sp-sdk";
 import { privateKeyToAccount } from "viem/accounts";
+
 const privateKey = "0x2ec0718fe60e884f26f6a787a44c1e578cca6726aa7a151f27eccd5c243ffac1";
 const client = new SignProtocolClient(SpMode.OnChain, {
   chain: EvmChains.scrollSepolia,

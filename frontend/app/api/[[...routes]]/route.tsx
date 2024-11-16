@@ -7,7 +7,6 @@ import { handle } from "frog/next";
 import { serveStatic } from "frog/serve-static";
 import { createTicketAttestation } from "./attestation";
 import QRCode from "qrcode";
-// import { User } from "./index";
 
 const app = new Frog({
   assetsPath: "/",
@@ -36,27 +35,6 @@ app.frame("/movie", async (c) => {
   userDetails.set("movie", movieTitle);
   userDetails.set("showTime", showTime);
 
-  // const existingUser = await User.findOne({ "user1" });
-  // if (!existingUser) {
-  //   const newUser = new User({
-  //     "user1",
-  //     theatre: '',
-  //     movie: '',
-  //     showTime: '',
-  //     selectedSeats: [],
-  //     attestationId: '',
-  //     txHash: '',
-  //     indexingValue: ''
-  //   });
-  //   await newUser.save();
-  // }
-
-  // // update user theatre, movie and showtime
-  // await User.updateOne(
-  //   { "user1 "},
-
-  // );
-
   const { inputText, status } = c;
 
   const response = await fetch(
@@ -66,8 +44,12 @@ app.frame("/movie", async (c) => {
       showTime
     )}`
   );
-  const availableSeats = response.ok
-    ? (await response.json()).availableSeats
+  interface Seat {
+    id: string;
+    price: string;
+  }
+  const availableSeats: Seat[] = response.ok
+    ? ((await response.json()) as { availableSeats: Seat[] }).availableSeats
     : [];
   const selectedSeats = inputText
     ? inputText.split(",").map((s) => s.trim())
@@ -172,7 +154,7 @@ app.frame("/movie", async (c) => {
             { color: "#22c55e", label: "Selected" },
           ].map((item) => (
             <div
-              key={item}
+              key="item"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -258,10 +240,7 @@ app.frame("/movie", async (c) => {
     ),
     intents: [
       <TextInput key="input" placeholder="Enter seats (e.g., A1,A2)" />,
-      <Button
-        key="confirm-button"
-        action={`/movie?movieTitle=${movieTitle}&theatreName=${theatre}&showTime=${showTime}`}
-      >
+      <Button key="confirm" action={`/movie`}>
         Confirm
       </Button>,
       <Button key="book">Book</Button>,
@@ -485,10 +464,58 @@ app.frame("/movie/username", async (c) => {
     ),
     intents: [
       <TextInput key="input" placeholder="Enter Name (e.g., Andy)" />,
-      <Button key="submit" value="submit" action="/movie/ticket">
+      <Button key="submit" value="submit" action="/movie/phone">
         Submit
       </Button>,
       status === "response" && <Button.Reset>Reset</Button.Reset>,
+    ],
+  });
+});
+
+app.frame("/movie/phone", async (c) => {
+  const { inputText, status } = c;
+
+  userDetails.set("phone", inputText);
+
+  return c.res({
+    action: "/movie/ticket",
+    image: (
+      <div
+        style={{
+          alignItems: "center",
+          background: "black",
+          backgroundSize: "100% 100%",
+          display: "flex",
+          flexDirection: "column",
+          flexWrap: "nowrap",
+          height: "100%",
+          justifyContent: "center",
+          textAlign: "center",
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            color: "white",
+            fontSize: 60,
+            fontStyle: "normal",
+            letterSpacing: "-0.025em",
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: "0 120px",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          We Need Your Phone Number, Please!!
+        </div>
+      </div>
+    ),
+    intents: [
+      <TextInput key="input" placeholder="Enter your phone (e.g., 12345)" />,
+      <Button key="submit" value="submit" action="/movie/ticket">
+        Submit
+      </Button>,
+      status === "response" && <Button.Reset>Reset Phone</Button.Reset>,
     ],
   });
 });
