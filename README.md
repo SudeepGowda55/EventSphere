@@ -11,6 +11,7 @@ XMTP Bot: 0xCc213DB18f8Bc2e58855cBF4Fb322162f6958F72
 
 XMTP Bot API: https://ethglobal-bangkok-production.up.railway.app/
 
+The movie ticket bot, built using XMTP's MessageKit and Frames, streamlines ticket reservations with an intuitive chat interface. Users can browse movies, select showtimes, and book tickets directly within the messaging platform. It leverages Frames for interactive UI components like buttons and carousels, enhancing user experience. The bot ensures seamless communication and transaction security in a decentralized environment.
 
 # Scroll SDK Rollup
 
