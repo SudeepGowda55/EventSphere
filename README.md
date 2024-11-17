@@ -8,6 +8,7 @@ This is an innovative ticket booking platform with on-chain attestation done on 
 
 Backend:
 XMTP Bot: 0xCc213DB18f8Bc2e58855cBF4Fb322162f6958F72
+
 XMTP Bot API: https://ethglobal-bangkok-production.up.railway.app/
 
 
