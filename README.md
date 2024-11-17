@@ -11,9 +11,6 @@ XMTP Bot:
 XMTP Bot API: https://ethglobal-bangkok-production.up.railway.app/
 ee1ef5b4ce080aa9ecb3ad8c92115e971910f4ed1e84459b9bbfb12a543f6b9a
 
-
-# Swift Yield
-
 # Scroll SDK Rollup
 
 <br />
@@ -34,19 +31,22 @@ ee1ef5b4ce080aa9ecb3ad8c92115e971910f4ed1e84459b9bbfb12a543f6b9a
 
 <br />
 
-**Blockscout Explorer to view L2 Rollup Transactions**
+# Blockscout Explorer to view L2 Rollup Transactions**
 
 <img width="960" alt="Screenshot 2024-11-17 at 8 06 11 AM" src="https://github.com/user-attachments/assets/e62b7206-8886-4689-8f0f-7f44bc4c7eb5">
 
+<br />
 <br />
 
 <img width="955" alt="Screenshot 2024-11-17 at 8 04 37 AM" src="https://github.com/user-attachments/assets/c9be68f1-6651-42b5-b7b5-c1957018cbac">
 
 <br />
 
-**Smart Contract to provide movie data was deployed on L2 Rollup**
+# Smart Contract to provide movie data was deployed on L2 Rollup**
 
 <img width="959" alt="Screenshot 2024-11-17 at 8 05 11 AM" src="https://github.com/user-attachments/assets/9c1016a4-9741-456e-8200-f3cb18bb47a2">
+
+<br />
 
 <br />
 
@@ -56,8 +56,8 @@ ee1ef5b4ce080aa9ecb3ad8c92115e971910f4ed1e84459b9bbfb12a543f6b9a
 
 ## Feedback for Scroll SDK
 
-1. Visit https://swiftyield.vercel.app/ and click on start arbitrage, verify yourself with World ID, then deploy the contract.
+1. I really liked the vision of scroll like creating multi chain ecosystem using scroll sdk and the quick deployment of our own l2 rollup using scroll sdk is really impressive.
    
-2. After the contract is deployed copy the contract address.
+2. During the deployment of my own L2 rollup using scroll sdk, I faced couple of issues in AWS Deployment, like the L1 Devnet is not getting created and the IAM Policies that are specified in docs for creating gp3 volume are not sufficient.
    
-3. Clone this repo and run
+3. The docs is really nice but if possible please add information about terms like L1_CONTRACT_DEPLOYMENT_BLOCK, etc which are bit confusing to understand, other than that scroll protocol is the best l2 rollup that i've used.
