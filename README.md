@@ -45,10 +45,19 @@ You can access the **Public Explorer** from here [https://dashboard.tenderly.co/
 **Scroll SDK Rollup**
 
 <br />
+
 <img width="962" alt="Screenshot 2024-11-17 at 8 01 45 AM" src="https://github.com/user-attachments/assets/ddea576c-7c25-4bae-b94f-88b942ddf134">
 
+<br />
+
 ![scroll-rollup](https://github.com/user-attachments/assets/da499d64-c0dd-4eb2-ada1-480aa25c0ca7)
+
+<br />
+
 <img width="960" alt="Screenshot 2024-11-17 at 8 06 11 AM" src="https://github.com/user-attachments/assets/e62b7206-8886-4689-8f0f-7f44bc4c7eb5">
+
+<br />
+
 <img width="959" alt="Screenshot 2024-11-17 at 8 05 11 AM" src="https://github.com/user-attachments/assets/9c1016a4-9741-456e-8200-f3cb18bb47a2">
 
 <br />
