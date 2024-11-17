@@ -72,3 +72,7 @@ The movie ticket bot, built using XMTP's MessageKit and Frames, streamlines tick
 2. During the deployment of my own L2 rollup using scroll sdk, I faced couple of issues in AWS Deployment, like the L1 Devnet is not getting created and the IAM Policies that are specified in docs for creating gp3 volume are not sufficient.
    
 3. The docs is really nice but if possible please add information about terms like L1_CONTRACT_DEPLOYMENT_BLOCK, etc which are bit confusing to understand, other than that scroll protocol is the best l2 rollup that i've used.
+
+## Pyth Developer Feedback
+https://excalidraw.com/#json=IRCGN447mp8zE6uN8C4Ja,WByKBfntgkm9JUbpcSYEOQ
+
