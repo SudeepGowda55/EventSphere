@@ -50,9 +50,6 @@ You can access the **Public Explorer** from here [https://dashboard.tenderly.co/
 
 <br />
 
-![scroll-rollup](https://github.com/user-attachments/assets/da499d64-c0dd-4eb2-ada1-480aa25c0ca7)
-
-<br />
 
 <img width="960" alt="Screenshot 2024-11-17 at 8 06 11 AM" src="https://github.com/user-attachments/assets/e62b7206-8886-4689-8f0f-7f44bc4c7eb5">
 
